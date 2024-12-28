@@ -33,15 +33,30 @@ const Login = () => {
 
   return (
     <>
-      <Container maxWidth={false} disableGutters>
+      <Container sx={{
+        height: "100%",
+      
+      }} maxWidth={false} disableGutters>
         <Box
           sx={{
+            display: "flex",
+            flexDirection: "column",
+          justifyContent:"space-evenly",
+            alignItems:"center",
             bgcolor: '#1C1D21',
-           
+            height: "100vh",
+            border:"10px solid black"
           }}
         >
           {/* col-1 */}
-          <Container maxWidth="xl">
+          <Container maxWidth="xl" sx={{
+            order: "2",
+            backgroundColor:"red",
+            ["@media (min-width:768px)"]: {
+              order: "none",
+              backgroundColor:"pink",
+            },
+          }}>
             {/* text */}
             <Box
               display={'flex'}
@@ -108,10 +123,9 @@ const Login = () => {
           </Container>
           {/* col-2 */}
           <Box
-           
             sx={{
-            
-              bgcolor: '#925FE2',
+              // flexGrow:"1",
+              // bgcolor: '#925FE2',
             }}
           >
             <Container maxWidth="xl">
@@ -124,7 +138,7 @@ const Login = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: { xs: '1.75rem', sm: '2.5rem', md: '4rem' ,lg:"5rem" },
+                    fontSize: { xs: '1.5rem', sm: '2.5rem', md: '4rem' ,lg:"5rem" },
                   }}
                   variant="h1"
                 >
@@ -144,7 +158,7 @@ const Login = () => {
                 sx={{
                 border:"1px solid red"
               }}>
-                <img className='border border-pink-900' src={background} alt="background-login" />
+                <img className='border border-pink-900 w-full max-w-[800px] min-w-[350px]' src={background} alt="background-login" />
               </Box>
             </Container>
           </Box>
