@@ -33,30 +33,39 @@ const Login = () => {
 
   return (
     <>
-      <Container sx={{
-        height: "100%",
-      
-      }} maxWidth={false} disableGutters>
+      <Container
+        sx={{
+          height: '100%',
+        }}
+        maxWidth={false}
+        disableGutters
+      >
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-          justifyContent:"space-evenly",
-            alignItems:"center",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
             bgcolor: '#1C1D21',
-            height: "100vh",
-            border:"10px solid black"
+            height: '100vh',
+            border: '10px solid black',
+            ['@media(min-width:768px)']: {
+              flexDirection: 'row',
+            },
           }}
         >
           {/* col-1 */}
-          <Container maxWidth="xl" sx={{
-            order: "2",
-            backgroundColor:"red",
-            ["@media (min-width:768px)"]: {
-              order: "none",
-              backgroundColor:"pink",
-            },
-          }}>
+          <Container
+            maxWidth="xl"
+            sx={{
+              //  paddingTop:"2rem",
+              flex: '1',
+              border: '1px solid red',
+              order: '2',
+              // backgroundColor:"red",
+              ['@media (min-width:768px)']: {},
+            }}
+          >
             {/* text */}
             <Box
               display={'flex'}
@@ -72,7 +81,7 @@ const Login = () => {
               >
                 <span className="text-white font-semibold">Login</span>
               </Typography>
-              <p className="text-white">Enter Your account details</p>
+              <p className="text-[#FFFFFF88] py-3">Enter Your account details</p>
             </Box>
             {/* form */}
             <form
@@ -124,8 +133,18 @@ const Login = () => {
           {/* col-2 */}
           <Box
             sx={{
-              // flexGrow:"1",
-              // bgcolor: '#925FE2',
+              flex: '1',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'cener',
+              justifyContent: 'center',
+              order: '1',
+              border: '1px solid red',
+              bgcolor: '#925FE2',
+              ['@media (min-width:768px)']: {
+                order: '3',
+                height: '100vh',
+              },
             }}
           >
             <Container maxWidth="xl">
@@ -138,27 +157,41 @@ const Login = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: { xs: '1.5rem', sm: '2.5rem', md: '4rem' ,lg:"5rem" },
+                    fontSize: {
+                      xs: '1.9rem',
+                      sm: '2.5rem',
+                      md: '3rem',
+                      lg: '4rem',
+                      xl: '4.5rem',
+                    },
                   }}
                   variant="h1"
                 >
-                  <p className="text-white">
-                    <span className="font-bold">Welcome to</span>{' '}
+                  <p className="text-white text-left xl:leading-[70px] pt-20">
+                    <span className="font-bold">Welcome to </span>
                     <span>student portal</span>
                   </p>
+                  
                 </Typography>
-                <p className="text-white">Login to access your account</p>
+                <p className="text-[#FFFFFF88] py-10  text-left  ">
+                  Login to access your account
+                </p>
               </Box>
               {/* image */}
               <Box
-                 display={'flex'}
-                 flexDirection={'column'}
-                 alignItems={'center'}
-                 justifyContent={'center'}
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                justifyContent={'center'}
                 sx={{
-                border:"1px solid red"
-              }}>
-                <img className='border border-pink-900 w-full max-w-[800px] min-w-[350px]' src={background} alt="background-login" />
+                  border: '1px solid red',
+                }}
+              >
+                <img
+                  className="border border-pink-900 w-full max-w-[800px] min-w-[400px]"
+                  src={background}
+                  alt="background-login"
+                />
               </Box>
             </Container>
           </Box>
