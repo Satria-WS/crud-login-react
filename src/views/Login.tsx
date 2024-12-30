@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
 import background from '../assets/background-login.png';
 
@@ -81,7 +81,9 @@ const Login = () => {
               >
                 <span className="text-white font-semibold">Login</span>
               </Typography>
-              <p className="text-[#FFFFFF88] py-3">Enter Your account details</p>
+              <p className="text-[#FFFFFF88] py-3">
+                Enter Your account details
+              </p>
             </Box>
             {/* form */}
             <form
@@ -127,8 +129,24 @@ const Login = () => {
                     }
                   />
                 </FormControl>
+                <Button
+                  sx={{
+                    textTransform: 'none',
+                    '&:hover': {
+                      backgroundColor: '#7b1fa2 !important', // Darker purple on hover
+                    },
+                  }}
+                  variant="contained"
+                  color="primary"
+                >
+                  Login
+                </Button>
               </Box>
             </form>
+            <Box>
+              <p className='text-white'>Dont have an account</p>
+              <Button>Sign up</Button>
+            </Box>
           </Container>
           {/* col-2 */}
           <Box
@@ -171,7 +189,6 @@ const Login = () => {
                     <span className="font-bold">Welcome to </span>
                     <span>student portal</span>
                   </p>
-                  
                 </Typography>
                 <p className="text-[#FFFFFF88] py-10  text-left  ">
                   Login to access your account
