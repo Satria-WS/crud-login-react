@@ -214,7 +214,7 @@ const Login = () => {
                 }}
               >
                 <img
-                  className="border border-pink-900 w-full  max-w-[36rem] min-w-[400px]"
+                  className="border border-pink-900 w-full  max-w-[36rem] md:max-w-[800px] min-w-[400px]"
                   src={background}
                   alt="background-login"
                 />
