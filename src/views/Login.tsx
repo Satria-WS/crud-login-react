@@ -131,7 +131,7 @@ const Login = () => {
                 </FormControl>
                 <Button
                   sx={{
-                    textTransform: 'none',
+                    
                     '&:hover': {
                       backgroundColor: '#7b1fa2 !important', // Darker purple on hover
                     },
@@ -144,8 +144,10 @@ const Login = () => {
               </Box>
             </form>
             <Box>
-              <p className='text-white'>Dont have an account</p>
-              <Button>Sign up</Button>
+              <p className="text-white">Dont have an account</p>
+              <Button variant="contained" color="primary">
+                Sign up
+              </Button>
             </Box>
           </Container>
           {/* col-2 */}
