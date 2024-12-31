@@ -12,7 +12,11 @@
 }
 
 
-
+/* Button */
+.MuiButton-root {
+ text-transform: none !important;
+}
 .MuiButton-colorPrimary {
   background-color: #9C6FE4 !important ;
+  
 }
