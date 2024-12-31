@@ -92,7 +92,7 @@ const Login = () => {
             >
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 {/* username */}
-                <FormControl sx={{ m: 1 }} variant="standard" fullWidth>
+                <FormControl sx={{ m: 1 , border:"1px solid red"  }} variant="standard" fullWidth>
                   <InputLabel sx={{ color: '#FFFFFF80' }} htmlFor="username">
                     Username
                   </InputLabel>
@@ -143,9 +143,16 @@ const Login = () => {
                 </Button>
               </Box>
             </form>
-            <Box>
-              <p className="text-white">Dont have an account</p>
-              <Button variant="contained" color="primary">
+            <Box
+              border={'1px solid red'}
+              display={'flex'}
+              justifyContent="space-around"
+              alignItems={'center'}
+            >
+              <p className="text-white py-3 md:text-xs  ">Dont have an account?</p>
+              <Button sx={{
+                backgroundColor:"#333437 !important"
+              }} variant="contained" >
                 Sign up
               </Button>
             </Box>
@@ -153,7 +160,7 @@ const Login = () => {
           {/* col-2 */}
           <Box
             sx={{
-              flex: '1',
+              flex: '2',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'cener',
@@ -207,7 +214,7 @@ const Login = () => {
                 }}
               >
                 <img
-                  className="border border-pink-900 w-full max-w-[800px] min-w-[400px]"
+                  className="border border-pink-900 w-full  max-w-[36rem] min-w-[400px]"
                   src={background}
                   alt="background-login"
                 />
